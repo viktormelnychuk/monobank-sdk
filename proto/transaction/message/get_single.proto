@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "message/transaction.proto";
+
+package transaction.message;
+
+option go_package = "github.com/viktormelnychuk/monobank-sdk/go/transaction/message";
+
+message GetByIdRequest {
+  int32 transactionID = 1;
+}

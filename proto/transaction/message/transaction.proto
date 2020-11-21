@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package transaction.message;
+
+option go_package = "github.com/viktormelnychuk/monobank-sdk/go/transaction/message";
+
+message Transaction {
+  int32 ID = 1;
+  int64 time = 2;
+  string description = 3;
+  int32 mcc = 4;
+  int64 amount = 5;
+  int32 currencyCode = 6;
+  int32 commissionRate = 7;
+  int32 cashbackAmount = 8;
+  int64 balance = 9;
+  bool hold = 10;
+}

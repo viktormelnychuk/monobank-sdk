@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+import "message/get_single.proto";
+import "message/get_multiple.proto";
+import "message/transaction.proto";
+
+package transaction;
+
+option go_package = "github.com/viktormelnychuk/monobank-sdk/go/transaction";
+
+
+service Transaction {
+  rpc GetAllTransactions(message.GetTransactionsRequest) returns (message.GetTransactionsResponse);
+  rpc GetById(message.GetByIdRequest) returns (message.Transaction);
+}

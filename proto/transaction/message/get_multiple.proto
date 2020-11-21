@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "message/transaction.proto";
+
+package transaction.message;
+
+option go_package = "github.com/viktormelnychuk/monobank-sdk/go/transaction/message";
+
+message GetTransactionsRequest {
+  int32 userID = 1;
+  int64  dateFrom = 2;
+  int64  dateTo = 3;
+}
+
+message GetTransactionsResponse {
+  repeated Transaction transactions = 1;
+}
+
